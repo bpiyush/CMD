@@ -8,3 +8,4 @@ ckpts/
 __pycache__
 *.pth
 wandb
+sample.txt

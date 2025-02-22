@@ -31,7 +31,6 @@ dependencies = [
     "transformers==4.34.0",
     "triton>=3.2.0",
     "wandb>=0.19.7",
-    "xformers>=0.0.29.post3",
 ]
 
 [tool.uv.sources]
