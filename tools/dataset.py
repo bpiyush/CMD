@@ -113,11 +113,13 @@ class VideoFolderDataset(Dataset):
         self.fold = fold
         self.resolution = resolution
         self.nframes = n_frames
-        self.annotation_path = os.path.join(video_root, 'ucfTrainTestlist')
+        # self.annotation_path = os.path.join(video_root, 'ucfTrainTestlist')
+        self.annotation_path = os.path.join(video_root, '../metadata')
         self.classes = list(
             natsorted(p for p in os.listdir(video_root) if osp.isdir(osp.join(video_root, p)))
             )
-        self.classes.remove('ucfTrainTestlist')
+        if "ucfTrainTestlist" in self.classes:
+            self.classes.remove('ucfTrainTestlist')
         self.class_to_idx = {self.classes[i]: i for i in range(len(self.classes))}
         self.samples = make_dataset(video_root, self.class_to_idx, ('avi',), is_valid_file=None)
         video_list = [x[0] for x in self.samples]

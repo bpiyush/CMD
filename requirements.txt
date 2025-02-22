@@ -19,7 +19,8 @@ regex
 sentencepiece 
 timm
 tqdm
-transformers==4.29.2
+# transformers==4.29.2
+transformers==4.34.0
 triton
 wandb
 xformers

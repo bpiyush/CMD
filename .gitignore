@@ -3,3 +3,8 @@ ckpts/
 .DS_Store
 .idea
 .vscode
+
+*ProjectedAutoencoder
+__pycache__
+*.pth
+wandb
